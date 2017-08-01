@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Pen Picker</title>
+	<link rel="stylesheet" href="penPicker.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+
+	<div id="penPicker"></div>
+
+</body>
+
+<script src="penPicker.js"></script>
+<script type="text/javascript">
+	function logPickedValues(color, width) { console.log("Color : " + color + " & Width : " + width) };
+	var myPenPicker = new PenPicker(logPickedValues, document.getElementById("penPicker"), { debug: true });
+</script>
+
+</html>

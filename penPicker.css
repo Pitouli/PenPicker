@@ -1,0 +1,154 @@
+html {
+  box-sizing: border-box;
+  background: #DDD;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+.PP-penPicker {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px; 
+  background-color: rgba(255,255,255,0.5);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  transition: width 0.5s, height 0.5s;
+  transition-duration: ease-in-out;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.PP-penPicker.PP-open {
+  width: 260px;
+  height: 260px;
+  transition: width 0.5s, height 0.5s;
+  transition-duration: ease-in-out;
+}
+.PP-penPickerBox {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  height: 260px; 
+}
+
+.PP-penPreviewBox {
+  position: absolute;
+  display: flex;
+  left: 0px;
+  bottom: 0px;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+}
+.PP-penPreview {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: auto;
+  background-color: #AAA;
+  border-color: #AAA;
+  border-style: solid;
+  border-width: 0px; 
+}
+.PP-penPicker.PP-colorTransition .PP-penPreview { 
+  transition: background-color 0.2s;
+}
+.PP-penPicker.PP-widthTransition .PP-penPreview { 
+  transition: width 0.2s, height 0.2s;
+}
+
+.PP-widthSelectorBox {
+  position: absolute;
+  left:0px;
+  top:0px;
+  height: 200px;
+  width: 60px;
+  padding: 10px;
+}
+
+.PP-widthSelectorHead {
+  height: 20px;
+  width:40px;
+  border-radius: 50px 50px 0 0;
+  background-color: #AAA;
+}
+.PP-widthSelector { /* A triangle in pure CSS */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 160px 20px 0 20px;
+  border-color: #AAA transparent transparent transparent;
+  -webkit-transform:rotate(360deg);
+}
+
+.PP-colorSelectorBox {
+  position: absolute;
+  right:0px;
+  bottom:0px;
+  height: 60px;
+  width: 200px;
+  padding: 20px 20px 20px 10px;
+}
+.PP-colorSelectorRainbow {
+  float: left;
+  width: 100px;
+  height: 20px;
+  background-color: #AAA;
+  background: linear-gradient(to right, #ff0000 0%,#ffff00 17%,#00ff00 33%,#00ffff 50%,#0000ff 67%,#ff00ff 83%,#ff0000 100%);
+  border-radius: 10px;
+}
+.PP-colorSelectorNB {
+  float: left;
+  width: 40px;
+  height: 20px;
+  margin-left: 5px;
+  background-color: #AAA;
+  background: linear-gradient(to right, #fff 0%,#000 100%);
+  border-radius: 10px;
+}
+.PP-colorSelectorEraser {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  border: 1px solid #AAA;
+  border-radius: 10px;
+}
+
+.PP-handle {
+  position: absolute;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  height: 40px;
+  width: 40px;
+  border-radius: 2px;
+}
+.PP-handle.PP-horizontal {
+  width: 3px;
+  margin-left: -2px;
+  left: 45%;
+  top: calc(50% - 20px);
+}
+.PP-handle.PP-vertical {
+  height: 3px;
+  margin-bottom: -2px;
+  bottom: 70%;
+}
+
+.PP-doubleSelectorBox {
+  position: absolute;
+  right:0px;
+  top:0px;
+  width: 200px;
+  height: 200px;
+}
